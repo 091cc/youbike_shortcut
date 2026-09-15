@@ -4,7 +4,7 @@
 
 ## 安裝方式
 1. 由網址[https://www.icloud.com/shortcuts/87f4cd33c3324f18a01b38b0e4858ee9](https://www.icloud.com/shortcuts/87f4cd33c3324f18a01b38b0e4858ee9) 或 [YouBike_Status.shortcut](YouBike_Status.shortcut)下載至裝置
-2. 一提示加入捷徑（Shorrtcuts app）
+2. 一提示加入捷徑（Shortcuts app）
 3. 點選分享，加入桌面
 4. 到桌面點選腳踏車圖案運行
 
