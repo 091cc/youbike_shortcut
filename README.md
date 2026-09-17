@@ -3,7 +3,7 @@
 查詢附近 YouBike 站點即時車況的 iOS 捷徑。定位後自動判斷所在縣市，找出周邊 500 公尺內最近的站點；若最近站沒有可借車輛，會自動往下檢查第二近、第三近的站點，直到找到有車的站，並整合成一則通知。
 
 ## 安裝方式
-1. 由網址[https://www.icloud.com/shortcuts/87f4cd33c3324f18a01b38b0e4858ee9](https://www.icloud.com/shortcuts/87f4cd33c3324f18a01b38b0e4858ee9) 或 [YouBike_Status.shortcut](YouBike_Status.shortcut)下載至裝置
+1. 由網址[https://www.icloud.com/shortcuts/9caa274334214b85b88221d795c5ee81](https://www.icloud.com/shortcuts/9caa274334214b85b88221d795c5ee81) 或 [YouBike_Status.shortcut](YouBike_Status.shortcut)下載至裝置
 2. 一提示加入捷徑（Shortcuts app）
 3. 點選分享，加入桌面
 4. 到桌面點選腳踏車圖案運行
