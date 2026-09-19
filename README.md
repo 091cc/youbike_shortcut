@@ -40,8 +40,12 @@
 
 需要 MacOS Tahoe(16.0) 或以上版本
 
+**watchOS**
+
+需要 watchOS 7 或以上版本
+
 > [!NOTE]
-> 此捷徑僅在iOS26及27測試
+> 此捷徑僅在iOS26及27及watchOS 26測試
 
 ## 架構總覽
 
