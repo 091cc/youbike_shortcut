@@ -44,7 +44,7 @@
 
 需要 watchOS 7 或以上版本
 
-> [!NOTE]
+> [!WARNING]
 > 此捷徑僅在iOS26及27及watchOS 26測試
 
 ## 架構總覽
