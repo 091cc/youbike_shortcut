@@ -1,6 +1,6 @@
 {
-  "version": "1.1",
-  "url": "https://www.icloud.com/shortcuts/9caa274334214b85b88221d795c5ee81",
-  "changelog": "add apdate service",
-  "changelogZh": "新增更新提示"
+  "version": "1.1.1",
+  "url": "https://www.icloud.com/shortcuts/1a0973e0a1e644658988cad06faf3013",
+  "changelog": "Correct the Chinese output error",
+  "changelogZh": "修正中文輸出錯誤和參數問題"
 }
