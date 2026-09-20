@@ -73,7 +73,7 @@
 
 ---
 
-## 🇺🇸/🇬🇧 English
+## 🇺🇸/🇬🇧English
 
 An iOS Shortcut to check real-time YouBike availability nearby. After locating your current position, it automatically determines your county/city and searches for stations within 500 meters. If the closest station has no available bikes, it automatically checks the second and third closest stations until a station with available bikes is found, consolidating the result into a single notification.
 
