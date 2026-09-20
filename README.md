@@ -15,11 +15,11 @@
 > [!NOTE]
 > 可新增自動化功能
 >
-> iOS 16
+> iOS 26
 > 
 > 點選下方自動化 > 點擊新增自動化操作 > 點選特定時間 > 輸入想自動運行的時間 > 重複建議選每週 > 點選下一步 > 找到我的捷徑 > 選擇 `YouBike Status (public version)`
 >
-> iOS 17+
+> iOS 27+
 > 
 > 長按YouBike Status捷徑 > 點擊編輯 > 下面點搜尋 > 自動化 > 特定時間 > 重複頻率建議選每週 > 選執行天數（星期幾）
 
@@ -50,15 +50,15 @@
 需要 watchOS 7.0 或以上版本
 
 > [!WARNING]
-> 此捷徑僅在 iOS 16、iOS 17 及 watchOS 10 測試過
+> 此捷徑僅在 iOS 26、iOS 27 及 watchOS 26 測試
 
 ## 架構總覽
 
 ```
 ┌─────────────┐         ┌──────────────────────┐         ┌──────────────────────┐
 │     iOS     │  HTTPS  │   Cloudflare Worker  │  HTTPS  │         TDX          │
-│             │ ─────▶ │                      │ ─────▶ │                      │
-│  Shortcuts  │ ◀───── │ (youbike-tdx-worker) │ ◀───── │ tdx.transportdata.tw │
+│             │ ─────▶  │                      │ ─────▶  │                      │
+│  Shortcuts  │ ◀─────  │ (youbike-tdx-worker) │ ◀─────  │ tdx.transportdata.tw │
 └─────────────┘         └──────────────────────┘         └──────────────────────┘
 ```
 
@@ -117,7 +117,7 @@ Requires macOS Ventura (13.0) or later.
 Requires watchOS 7.0 or later.
 
 > [!WARNING]
-> This shortcut has only been tested on iOS 16, iOS 17, and watchOS 10.
+> This shortcut has only been tested on iOS 26, iOS 27, and watchOS 26.
 
 ## Architecture Overview
 
