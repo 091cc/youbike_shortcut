@@ -1,6 +1,6 @@
 {
-  "version": "1.2",
-  "url": "https://www.icloud.com/shortcuts/1a0973e0a1e644658988cad06faf3013",
-  "changelog": "Fix the duplicate search site name and the error message displayed after the second nearest site",
-  "changelogZh": "修正搜尋站點名稱重複及第二近站點後顯示錯誤資訊"
+  "version": "1.2.1",
+  "url": "https://www.icloud.com/shortcuts/81f8f681dbb2419299b9a4a92515ab13",
+  "changelog": "Remove the test residue",
+  "changelogZh": "移除測測殘留"
 }
