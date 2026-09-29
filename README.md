@@ -78,7 +78,7 @@
 An iOS Shortcut to check real-time YouBike availability nearby. After locating your current position, it automatically determines your county/city and searches for stations within 500 meters. If the closest station has no available bikes, it automatically checks the second and third closest stations until a station with available bikes is found, consolidating the result into a single notification.
 
 ## Installation
-1. Download to your device via [https://www.icloud.com/shortcuts/1a0973e0a1e644658988cad06faf3013](https://www.icloud.com/shortcuts/1a0973e0a1e644658988cad06faf3013) or [YouBike_Status.shortcut](YouBike_Status.shortcut).
+1. Download to your device via [https://www.icloud.com/shortcuts/81f8f681dbb2419299b9a4a92515ab13](https://www.icloud.com/shortcuts/81f8f681dbb2419299b9a4a92515ab13) or [YouBike_Status.shortcut](YouBike_Status.shortcut).
 2. Follow the prompt to add it to the Shortcuts app.
 3. Tap Share and select **Add to Home Screen**.
 4. Tap the bicycle icon on your Home Screen to run the shortcut.
