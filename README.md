@@ -7,7 +7,7 @@
 查詢附近 YouBike 站點即時車況的 iOS 捷徑。定位後自動判斷所在縣市，找出周邊 500 公尺內最近的站點；若最近站沒有可借車輛，會自動往下檢查第二近、第三近的站點，直到找到有車的站，並整合成一則通知。
 
 ## 安裝方式
-1. 由網址[https://www.icloud.com/shortcuts/c5ab9d866a4b4fe59662dac25ac98d21](https://www.icloud.com/shortcuts/c5ab9d866a4b4fe59662dac25ac98d21) 或 [YouBike_Status.shortcut](YouBike_Status.shortcut)下載至裝置
+1. 由網址[https://www.icloud.com/shortcuts/7f517a6848c34afe81b81eab6ae9e249](https://www.icloud.com/shortcuts/7f517a6848c34afe81b81eab6ae9e249) 或 [YouBike_Status.shortcut](YouBike_Status.shortcut)下載至裝置
 2. 依提示加入捷徑（Shortcuts app）
 3. 點選分享，加入桌面
 4. 到桌面點選腳踏車圖案運行
@@ -78,7 +78,7 @@
 An iOS Shortcut to check real-time YouBike availability nearby. After locating your current position, it automatically determines your county/city and searches for stations within 500 meters. If the closest station has no available bikes, it automatically checks the second and third closest stations until a station with available bikes is found, consolidating the result into a single notification.
 
 ## Installation
-1. Download to your device via [https://www.icloud.com/shortcuts/c5ab9d866a4b4fe59662dac25ac98d21](https://www.icloud.com/shortcuts/c5ab9d866a4b4fe59662dac25ac98d21) or [YouBike_Status.shortcut](YouBike_Status.shortcut).
+1. Download to your device via [https://www.icloud.com/shortcuts/7f517a6848c34afe81b81eab6ae9e249](https://www.icloud.com/shortcuts/7f517a6848c34afe81b81eab6ae9e249) or [YouBike_Status.shortcut](YouBike_Status.shortcut).
 2. Follow the prompt to add it to the Shortcuts app.
 3. Tap Share and select **Add to Home Screen**.
 4. Tap the bicycle icon on your Home Screen to run the shortcut.
