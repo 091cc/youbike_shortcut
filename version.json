@@ -1,6 +1,6 @@
 {
-  "version": "1.2.2",
-  "url": "https://www.icloud.com/shortcuts/c5ab9d866a4b4fe59662dac25ac98d21",
-  "changelog": "Remove the test residue",
-  "changelogZh": "移除測測殘留"
+  "version": "1.2.3",
+  "url": "https://www.icloud.com/shortcuts/7f517a6848c34afe81b81eab6ae9e249",
+  "changelog": "Fix the verification problem and the calculation method of picking distance",
+  "changelogZh": "修復驗證問題及挑整距離計算方式"
 }
