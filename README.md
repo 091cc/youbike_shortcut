@@ -65,17 +65,17 @@
 ```mermaid
 sequenceDiagram
     autonumber
-    actor User as iOS User (Shortcut)
+    participant User as iOS User (Shortcut)
     participant Worker as Cloudflare Worker (Edge Proxy)
     participant TDX as TDX Transport API
     
     User->>Worker: 傳送 GPS 座標 (Lat, Lon)
     alt 快取命中 (Cache Hit)
-        Worker-->>User: 直接回傳經清洗的輕量 JSON
+        Worker-->>User: 回傳經清洗的輕量 JSON
     else 快取未命中 (Cache Miss)
-        Worker->>TDX: 請求 OAuth 2.0 Token & 獲取場站資料
+        Worker->>TDX: 請求 OAuth Token & 獲取場站資料
         TDX-->>Worker: 回傳原始 JSON 資料
-        Worker->>Worker: 資料過濾、格式化與快取寫入
+        Note over Worker: 資料過濾、格式化與寫入快取
         Worker-->>User: 回傳處理完成的站點數據
     end
 ```
@@ -154,17 +154,17 @@ Requires watchOS 7.0 or later.
 ```mermaid
 sequenceDiagram
     autonumber
-    actor User as iOS User (Shortcut)
+    participant User as iOS User (Shortcut)
     participant Worker as Cloudflare Worker (Edge Proxy)
     participant TDX as TDX Transport API
     
     User->>Worker: Send GPS coordinates (Lat, Lon)
     alt Cache Hit
-        Worker-->>User: Directly return filtered & lightweight JSON
+        Worker-->>User: Return filtered & lightweight JSON
     else Cache Miss
-        Worker->>TDX: Request OAuth 2.0 Token & fetch station data
+        Worker->>TDX: Request OAuth Token & fetch station data
         TDX-->>Worker: Return raw JSON payload
-        Worker->>Worker: Filter, format data & write to cache
+        Note over Worker: Filter, format data & write to cache
         Worker-->>User: Return processed station data
     end
 ```
