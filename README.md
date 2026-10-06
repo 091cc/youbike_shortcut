@@ -62,6 +62,24 @@
 └─────────────┘         └──────────────────────┘         └──────────────────────┘
 ```
 
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as iOS User (Shortcut)
+    participant Worker as Cloudflare Worker (Edge Proxy)
+    participant TDX as TDX Transport API
+    
+    User->>Worker: 傳送 GPS 座標 (Lat, Lon)
+    alt 快取命中 (Cache Hit)
+        Worker-->>User: 直接回傳經清洗的輕量 JSON
+    else 快取未命中 (Cache Miss)
+        Worker->>TDX: 請求 OAuth 2.0 Token & 獲取場站資料
+        TDX-->>Worker: 回傳原始 JSON 資料
+        Worker->>Worker: 資料過濾、格式化與快取寫入
+        Worker-->>User: 回傳處理完成的站點數據
+    end
+```
+
 ## Shortcuts 捷徑邏輯
 
 1. **語言判斷**：取得裝置判定為中文（`ZhTw`），否則為英文（`En`）
@@ -70,6 +88,10 @@
 4. **前三近排序**：站點清單並計算與目前位置的距離，用三層距離比較邏輯，動態維護「最近、第二近、第三近」三組站點資料
 5. **依序檢查車況**：把前三近站點包成一份清單，用單一迴圈＋`Found` 旗標依序呼叫 `/availability`；若某站無車，記錄提示文字後檢查下一站；找到有車的站即組出完整訊息並停止
 6. **推播通知**：把所有跳過站點的提示，加上最終找到的站點資訊（或「附近皆無車可借」），整合成一則 `Show notification`
+
+## 技術決策與架構
+
+This project uses Cloudflare Worker to prevent API exposure and to execute complex calculations directly in the cloud. Because the raw JSON data returned by TDX is huge, the Worker first cleans and filters the information of nearby stations and remaining vehicles in the cloud, and only sends back the extremely lightweight JSON needed by the mobile phone, which significantly reduces mobile network traffic and parsing latency.
 
 ---
 
@@ -129,6 +151,24 @@ Requires watchOS 7.0 or later.
 └─────────────┘         └──────────────────────┘         └──────────────────────┘
 ```
 
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as iOS User (Shortcut)
+    participant Worker as Cloudflare Worker (Edge Proxy)
+    participant TDX as TDX Transport API
+    
+    User->>Worker: Send GPS coordinates (Lat, Lon)
+    alt Cache Hit
+        Worker-->>User: Directly return filtered & lightweight JSON
+    else Cache Miss
+        Worker->>TDX: Request OAuth 2.0 Token & fetch station data
+        TDX-->>Worker: Return raw JSON payload
+        Worker->>Worker: Filter, format data & write to cache
+        Worker-->>User: Return processed station data
+    end
+```
+
 ## Shortcuts Logic Flow
 
 1. **Language Detection**: Detects device language as Chinese (`ZhTw`); otherwise defaults to English (`En`).
@@ -137,6 +177,10 @@ Requires watchOS 7.0 or later.
 4. **Sort Top 3 Closest**: Calculates distance to each station using 3-tier comparison logic to dynamically track the 1st, 2nd, and 3rd closest stations.
 5. **Check Bike Availability**: Bundles the top 3 stations, loops with a `Found` flag, and calls `/availability`. If a station has no bikes, logs a skip message and moves to the next; stops when an available station is found.
 6. **Push Notification**: Combines all skipped station notices and final station info (or "No bikes available nearby") into a single `Show notification`.
+
+## Technical Decisions & Architecture
+
+This project utilizes Cloudflare Workers to act as an edge API proxy, preventing API credential exposure and offloading heavy computational logic to the cloud. Because raw JSON payloads returned by the TDX API are excessively large, the Worker cleans, filters, and formats nearby station data and vehicle availability directly on edge nodes. By returning only lightweight, ready-to-use JSON payloads to the client device, it significantly decreases mobile data usage and client-side parsing latency.
 
 ## License
 
