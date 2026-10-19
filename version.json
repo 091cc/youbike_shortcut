@@ -1,6 +1,6 @@
 {
-  "version": "1.2.3",
-  "url": "https://www.icloud.com/shortcuts/7f517a6848c34afe81b81eab6ae9e249",
-  "changelog": "Fix the verification problem and the calculation method of picking distance",
-  "changelogZh": "修復驗證問題及挑整距離計算方式"
+  "version": "1.3",
+  "url": "https://www.icloud.com/shortcuts/640f386ecfec4150af232bdbd4bd1a8b",
+  "changelog": "Add the automatic display of the site location on the map",
+  "changelogZh": "新增自動在地圖顯示站點位置"
 }
