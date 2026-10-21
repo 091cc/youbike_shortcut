@@ -1,6 +1,6 @@
 {
-  "version": "1.3",
-  "url": "https://www.icloud.com/shortcuts/8a09a7a579d64e32877f57e1755a0290",
-  "changelog": "Add the automatic display of the site location on the map",
-  "changelogZh": "新增自動在地圖顯示站點位置"
+  "version": "1.3.1",
+  "url": "https://www.icloud.com/shortcuts/dc1c78f42a0e4f748b59df18365e93e1",
+  "changelog": "Change the search radius to 1 kilometer,
+  "changelogZh": "更改搜尋半徑為1公里"
 }
